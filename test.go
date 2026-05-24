@@ -1,4 +1,4 @@
-package blackrock
+package neomind
 
 import (
 	"testing"
