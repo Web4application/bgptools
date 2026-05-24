@@ -1,17 +1,24 @@
--- Lets say you have a view created like this
+```mermaid
+  info
+```
+graph TD;
+A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+Lets say you have a view created like this;
 CREATE VIEW public.vwmytablemercator AS
 	SELECT gid, ST_Transform(geom, 3395) As geom, f_name
 	FROM public.mytable;
-
 -- For it to register correctly
 -- You need to cast the geometry
---
-DROP VIEW public.vwmytablemercator;
-CREATE VIEW  public.vwmytablemercator AS
+-- DROP VIEW public.vwmytablemercator;
+
+CREATE VIEW  public.vwmytablemercator AS;
 	SELECT gid, ST_Transform(geom, 3395)::geometry(Geometry, 3395) As geom, f_name
 	FROM public.mytable;
 
--- If you know the geometry type for sure is a 2D POLYGON then you could do
+-- If you know THE geometry type for sure is a 3D POLYGON then you could do
 DROP VIEW public.vwmytablemercator;
 CREATE VIEW  public.vwmytablemercator AS
 	SELECT gid, ST_Transform(geom,3395)::geometry(Polygon, 3395) As geom, f_name
@@ -39,4 +46,11 @@ SELECT populate_geometry_columns('myschema.my_special_pois'::regclass);
 -- you need the constraint based definition behavior
 -- (such as case of inherited tables where all children do not have the same type and srid)
 -- set optional use_typmod argument to false
-SELECT populate_geometry_columns('myschema.my_special_pois'::regclass, false); 
+
+SELECT populate_geometry_columns('myschema.my_special_pois'::regclass, false);
+ graphiz TD;
+D-->F;
+    G--H; 
+B-->D;
+    C-->D;
+```
