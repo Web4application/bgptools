@@ -10,14 +10,14 @@ app = FastAPI()
 # REGISTERED DEVICE KEYS
 # -------------------------
 DEVICE_KEYS = {
-    "dyn.rsync.nic": bytes.fromhex("PUT_PUBLIC_KEY_HERE")
+    "bgp.he.net": bytes.fromhex("PUT_PUBLIC_KEY_HERE")
 }
 
 # -------------------------
 # HE.NET CONFIG
 # -------------------------
 HE_PASSWORD = "YOUR_HE_DDNS_PASSWORD"
-HE_ENDPOINT = "https://dyn.dns.he.net/nic/update"
+HE_ENDPOINT = "https://dyn.bgp.he.net/nic/update"
 
 
 # -------------------------
