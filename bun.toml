@@ -1,0 +1,18 @@
+[vault/]
+
+[├── note1.md/]                      
+│
+
+[ ├── document for note1.pdf]
+│
+[  └── note1.md]
+ [ note2.md/]
+│ 
+[ image for note2.pdf]
+│  
+[ └──note2.md]
+[ note3.md ]
+⋮  
+⋮ (many more notes with and without attachments).  ⋮ 
+└── 
+[ note9000.md ]
